@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/mariosakka/sprouts/compare/v0.3.0...v0.3.1) (2026-11-08)
+
+
+### Miscellaneous Chores
+
+* release 0.3.1 ([1bcee77](https://github.com/mariosakka/sprouts/commit/1bcee77da73e03106dbae0cc506274eb00800380))
+
 ## [0.3.0](https://github.com/mariosakka/sprouts/compare/v0.2.2...v0.3.0) (2026-11-08)
 
 
