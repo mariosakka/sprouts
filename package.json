@@ -14,7 +14,8 @@
     "check": "npm run typecheck && npm run lint && npm test && npm run build",
     "prepare": "node scripts/install-hooks.mjs",
     "release:version": "node scripts/set-release-version.mjs",
-    "verify:release": "node scripts/verify-release.mjs"
+    "verify:release": "node scripts/verify-release.mjs",
+    "publish:workspace": "node scripts/publish-workspace.mjs"
   },
   "devDependencies": {
     "@angular/core": "^19.2.25",

@@ -18,8 +18,8 @@ jobs:
       - run: npm ci
       - run: npm run check
       - run: npm run verify:release -- "${{ inputs.tag_name }}"
-      - run: npm publish --workspace @mariosakka/sprouts --access public
-      - run: npm publish --workspace @mariosakka/sprouts-vue --access public
-      - run: npm publish --workspace @mariosakka/sprouts-react --access public
-      - run: npm publish --workspace @mariosakka/sprouts-angular --access public
-      - run: npm publish --workspace @mariosakka/sprouts-renderer --access public
+      - run: npm run publish:workspace -- @mariosakka/sprouts
+      - run: npm run publish:workspace -- @mariosakka/sprouts-vue
+      - run: npm run publish:workspace -- @mariosakka/sprouts-react
+      - run: npm run publish:workspace -- @mariosakka/sprouts-angular
+      - run: npm run publish:workspace -- @mariosakka/sprouts-renderer
