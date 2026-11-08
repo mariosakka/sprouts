@@ -30,7 +30,7 @@ jobs:
           GH_REPO: ${{ github.repository }}
           BRANCH: release-please--branches--main--components--sprouts
         run: |
-          read -r pr sha < <(gh pr list --head "$BRANCH" --state open --json number,headRefOid -q '.[] | [.number, .headRefOid] | join(" ")')
+          read -r pr sha < <(gh pr list --head "$BRANCH" --state open --json number,headRefOid -q '.[] | [.number, .headRefOid] | join(" ")') || true
           [ -n "${pr:-}" ] || { echo "no open release PR"; exit 0; }
           gh workflow run ci.yml --ref "$BRANCH"
           sleep 10
