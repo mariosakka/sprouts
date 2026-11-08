@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0](https://github.com/mariosakka/sprouts/compare/v0.2.2...v0.3.0) (2026-11-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* **angular:** Angular 17-19 are no longer supported.
+
+### Features
+
+* **angular:** target Angular 20+ with signal inputs ([d354172](https://github.com/mariosakka/sprouts/commit/d3541727507371cf53a06be8dd4979f5baa37fef))
+
 ## [0.2.2](https://github.com/mariosakka/sprouts/compare/v0.2.1...v0.2.2) (2026-11-08)
 
 
