@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/mariosakka/sprouts/compare/v0.2.1...v0.2.2) (2026-11-08)
+
+
+### Miscellaneous Chores
+
+* release 0.2.2 ([6571497](https://github.com/mariosakka/sprouts/commit/6571497b6f2a246a8d00f1dbdb724c80120e3968))
+
 ## [0.2.1](https://github.com/mariosakka/sprouts/compare/v0.2.0...v0.2.1) (2026-11-08)
 
 
