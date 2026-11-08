@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.1](https://github.com/mariosakka/sprouts/compare/v0.2.0...v0.2.1) (2026-11-08)
+
+
+### Bug Fixes
+
+* complete release publish handoff ([a3cbf7c](https://github.com/mariosakka/sprouts/commit/a3cbf7cab62bcc99bf2fd52e9d5d29768e02b99e))
+* make package publishing retry-safe ([f02a6db](https://github.com/mariosakka/sprouts/commit/f02a6db95e5757e68b5291320237fd0d5b99c310))
+
 ## [0.2.0](https://github.com/mariosakka/sprouts/compare/sprouts-v0.1.0...sprouts-v0.2.0) (2026-11-08)
 
 
