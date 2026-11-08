@@ -14,7 +14,7 @@ All five packages are published at `0.1.0`. Run `npm run check` to validate the 
 
 ## Releases
 
-Packages share one version. Release Please opens a release PR from Conventional Commits, updates the workspace and all package manifests, and creates a matching `v<version>` tag and GitHub release when that PR is merged. It then dispatches the trusted-publishing workflow, which verifies the tag against every package manifest before publishing the five packages in dependency order.
+Packages share one version. Release Please opens a release PR from Conventional Commits, updates the workspace and all package manifests, and creates a matching `v<version>` tag and GitHub release when that PR is merged. It then dispatches the trusted-publishing workflow, which verifies the tag against every package manifest before publishing the five packages in dependency order. Publishing is dispatch-only, so a historical GitHub release cannot republish an existing npm version.
 
 ## Live adapters
 
