@@ -7,10 +7,11 @@ permissions:
   contents: write
   pull-requests: write
   actions: write
+concurrency: { group: release-please, cancel-in-progress: false }
 jobs:
   release:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - id: release
         uses: googleapis/release-please-action@45996ed1f6d02564a971a2fa1b5860e934307cf7 # v5.0.0
@@ -23,3 +24,19 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TAG_NAME: ${{ steps.release.outputs.tag_name }}
         run: gh api --method POST "repos/$GITHUB_REPOSITORY/actions/workflows/publish.yml/dispatches" -f ref=main -F "inputs[tag_name]=$TAG_NAME"
+      # PRs opened by GITHUB_TOKEN do not trigger CI, so run it explicitly on the exact head SHA, then merge only that SHA.
+      - if: ${{ steps.release.outputs.prs_created == 'true' && startsWith(fromJSON(steps.release.outputs.pr).headBranchName, 'release-please--') }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ fromJSON(steps.release.outputs.pr).number }}
+          BRANCH: ${{ fromJSON(steps.release.outputs.pr).headBranchName }}
+        run: |
+          sha=$(gh pr view "$PR" --json headRefOid -q .headRefOid)
+          gh workflow run ci.yml --ref "$BRANCH"
+          sleep 10
+          run=$(gh run list --workflow ci.yml --branch "$BRANCH" --event workflow_dispatch --limit 1 --json databaseId,headSha -q ".[] | select(.headSha==\"$sha\") | .databaseId")
+          [ -n "$run" ] || { echo "no CI run found for $sha"; exit 1; }
+          gh run watch "$run" --exit-status
+          gh pr merge "$PR" --squash --match-head-commit "$sha"
+          # GITHUB_TOKEN merges do not fire push triggers, so start the release step ourselves.
+          gh workflow run release-please.yml --ref main

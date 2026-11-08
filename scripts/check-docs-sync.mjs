@@ -11,8 +11,8 @@ try {
 }
 
 const implementationChanged = changed.some((path) => /^packages\/[^/]+\/(src\/|package\.json$)/.test(path) && !/\.test\.(ts|tsx)$/.test(path))
-const docsChanged = changed.some((path) => path === 'README.md' || path.startsWith('docs/'))
+const docsChanged = changed.some((path) => path === 'README.md' || path.startsWith('docs/') || /^packages\/[^/]+\/README\.md$/.test(path))
 if (implementationChanged && !docsChanged) {
-  console.error('Package implementation changed without updating README.md or docs/. Add documentation or use a separate docs commit.')
+  console.error('Package implementation changed without updating a README.md or docs/. Add documentation or use a separate docs commit.')
   process.exit(1)
 }
