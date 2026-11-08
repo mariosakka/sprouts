@@ -18,7 +18,7 @@
     "publish:workspace": "node scripts/publish-workspace.mjs"
   },
   "devDependencies": {
-    "@angular/core": "^19.2.25",
+    "@angular/core": "^22.2.5",
     "@types/node": "^24.0.0",
     "@types/react": "^19.3.0",
     "@typescript-eslint/eslint-plugin": "^8.0.0",

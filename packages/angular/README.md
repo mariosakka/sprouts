@@ -1,6 +1,6 @@
 # @mariosakka/sprouts-angular
 
-Live Angular overlay that grows deterministic botanical SVG sprouts around its parent element. Decorative only (`aria-hidden`). Requires Angular 17 to 19.
+Live Angular overlay that grows deterministic botanical SVG sprouts around its parent element. Decorative only (`aria-hidden`). Requires Angular 20 or newer (signal inputs, zoneless-friendly, SSR-safe).
 
 ```sh
 npm install @mariosakka/sprouts-angular

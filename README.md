@@ -7,7 +7,7 @@ Deterministic botanical SVG art for live Vue, React, and Angular interfaces, or 
 - `@mariosakka/sprouts`: seed-based layout and SVG frame rendering.
 - `@mariosakka/sprouts-vue`: live Vue 3 overlay.
 - `@mariosakka/sprouts-react`: live React overlay for React 18 and 19.
-- `@mariosakka/sprouts-angular`: standalone Angular component for Angular 17 through 19.
+- `@mariosakka/sprouts-angular`: standalone Angular component for Angular 20 and newer (signal inputs).
 - `@mariosakka/sprouts-renderer`: Node rendering API and `sprouts render` CLI.
 
 All five packages are published at `0.1.0`. Run `npm run check` to validate the workspace and `npm run prepare` after cloning to install the local hook.
