@@ -1,0 +1,11 @@
+node_modules/
+dist/
+coverage/
+.env
+.claude/
+.codex/
+.cursor/
+.gemini/
+.windsurf/
+docs/superpowers/
+.superpowers/
