@@ -35,4 +35,50 @@ Use your own `reach` value in place of 56 if you set one. More recipes (reduced 
 | `reach` | `number` | `56` | How far vines extend past the parent |
 | `static` | `boolean` | `false` | Skip the grow animation and show the final frame |
 
+## Examples
+
+One seed per list item, so every card keeps its own look:
+
+```tsx
+{posts.map((post) => (
+  <li key={post.id} className="card">
+    <Sprouts seed={post.id} variant="corners" density={1} />
+    {post.title}
+  </li>
+))}
+```
+
+Skip the animation for users who prefer reduced motion:
+
+```tsx
+import { Sprouts } from '@mariosakka/sprouts-react'
+
+const still = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+export const Card = () => (
+  <div className="card" style={{ position: 'relative' }}>
+    <Sprouts seed="about" static={still} />
+  </div>
+)
+```
+
+Changing `seed`, `variant`, `density`, `reach` or `static` restarts the growth automatically:
+
+```tsx
+const [seed, setSeed] = useState(1)
+
+<button onClick={() => setSeed((n) => n + 1)}>Regrow</button>
+<Sprouts seed={seed} />
+```
+
+A wider reach for a hero section (remember the matching CSS offset):
+
+```tsx
+<Sprouts seed="hero" variant="burst" density={3} reach={120} />
+```
+
+```css
+.hero .sprouts { position: absolute; top: -120px; left: -120px; pointer-events: none; }
+```
+
 Part of [Sprouts](https://github.com/mariosakka/sprouts). MIT licensed. Geometry comes from [`@mariosakka/sprouts`](https://www.npmjs.com/package/@mariosakka/sprouts).
