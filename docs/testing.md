@@ -4,4 +4,4 @@
 
 CI also runs `scripts/check-docs-sync.mjs`: a package source or manifest change must include a change to `README.md` or `docs/`. This keeps user-facing documentation aligned without forcing documentation edits for tests-only changes.
 
-The release contract test requires the workspace and every publishable package to share a version. The publish workflow also rejects a GitHub release whose `v<version>` tag does not match those manifests.
+The release contract test requires the workspace and every publishable package to share a version. Release Please updates those manifests from Conventional Commits; the publish workflow rejects a `v<version>` tag that does not match them.

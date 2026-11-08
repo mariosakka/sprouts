@@ -14,7 +14,7 @@ All five packages are published at `0.1.0`. Run `npm run check` to validate the 
 
 ## Releases
 
-Packages share one version. For the next release, run `npm run release:version -- 0.1.1`, review the manifest and lockfile changes, run `npm run check`, and merge the release commit. Create a GitHub release tagged `v0.1.1`; the trusted-publishing workflow verifies that tag against every package manifest before publishing the five packages in dependency order.
+Packages share one version. Release Please opens a release PR from Conventional Commits, updates the workspace and all package manifests, and creates a matching `v<version>` tag and GitHub release when that PR is merged. It then dispatches the trusted-publishing workflow, which verifies the tag against every package manifest before publishing the five packages in dependency order.
 
 ## Live adapters
 
