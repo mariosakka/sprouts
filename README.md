@@ -10,7 +10,11 @@ Deterministic botanical SVG art for live Vue, React, and Angular interfaces, or 
 - `@mariosakka/sprouts-angular`: standalone Angular component for Angular 17 through 19.
 - `@mariosakka/sprouts-renderer`: Node rendering API and `sprouts render` CLI.
 
-All packages are versioned at `0.1.0` but have not yet been published to npm. Run `npm run check` to validate the workspace. Run `npm run prepare` after cloning to install the local hook. The first release is published interactively; later releases use GitHub trusted publishing after it is configured on npm.
+All five packages are published at `0.1.0`. Run `npm run check` to validate the workspace and `npm run prepare` after cloning to install the local hook.
+
+## Releases
+
+Packages share one version. For the next release, run `npm run release:version -- 0.1.1`, review the manifest and lockfile changes, run `npm run check`, and merge the release commit. Create a GitHub release tagged `v0.1.1`; the trusted-publishing workflow verifies that tag against every package manifest before publishing the five packages in dependency order.
 
 ## Live adapters
 

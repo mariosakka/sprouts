@@ -14,5 +14,5 @@ test('README documents every published package and supported live adapter', () =
 
 test('current test strategy and release status are documented', () => {
   expect(read('docs/testing.md')).toContain('type checks, linting, unit tests, and builds')
-  expect(read('docs/roadmap.md')).toContain('first npm publish')
+  expect(read('docs/roadmap.md')).toContain('Release automation')
 })

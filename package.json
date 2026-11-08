@@ -12,7 +12,9 @@
     "lint": "eslint . --max-warnings 0",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "check": "npm run typecheck && npm run lint && npm test && npm run build",
-    "prepare": "node scripts/install-hooks.mjs"
+    "prepare": "node scripts/install-hooks.mjs",
+    "release:version": "node scripts/set-release-version.mjs",
+    "verify:release": "node scripts/verify-release.mjs"
   },
   "devDependencies": {
     "@angular/core": "^19.2.25",
