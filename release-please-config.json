@@ -7,12 +7,33 @@
     ".": {
       "package-name": "sprouts",
       "extra-files": [
-        { "type": "json", "path": "packages/core/package.json", "jsonpath": "$.version" },
-        { "type": "json", "path": "packages/vue/package.json", "jsonpath": "$.version" },
-        { "type": "json", "path": "packages/react/package.json", "jsonpath": "$.version" },
-        { "type": "json", "path": "packages/angular/package.json", "jsonpath": "$.version" },
-        { "type": "json", "path": "packages/renderer/package.json", "jsonpath": "$.version" }
+        {
+          "type": "json",
+          "path": "packages/core/package.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": "packages/vue/package.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": "packages/react/package.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": "packages/angular/package.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": "packages/renderer/package.json",
+          "jsonpath": "$.version"
+        }
       ]
     }
-  }
+  },
+  "bump-minor-pre-major": true
 }

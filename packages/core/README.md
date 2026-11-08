@@ -30,3 +30,5 @@ const layout = layoutSprouts({ seed: 'hello', width: 320, height: 200 })
 The SVG is sized `width + 2 * reach` by `height + 2 * reach`, so position it offset by `-reach`. `SPROUT_VARIANTS` lists the variants.
 
 Part of [Sprouts](https://github.com/mariosakka/sprouts). MIT licensed. For framework components see `-vue`, `-react` and `-angular`; for GIF/WebP files see `-renderer`.
+
+More recipes: [guide](https://github.com/mariosakka/sprouts/blob/main/docs/guide.md) and [examples](https://github.com/mariosakka/sprouts/blob/main/docs/examples.md).

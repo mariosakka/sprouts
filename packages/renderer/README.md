@@ -37,3 +37,5 @@ await writeFile('hero.gif', buffer)
 `renderAnimation` accepts the core options plus `format`, `fps` and `holdMs` (final-frame hold, default 350 ms) and resolves to a `Buffer`. Output is `width + 2 * reach` by `height + 2 * reach` pixels.
 
 Part of [Sprouts](https://github.com/mariosakka/sprouts). MIT licensed.
+
+More recipes: [guide](https://github.com/mariosakka/sprouts/blob/main/docs/guide.md) and [examples](https://github.com/mariosakka/sprouts/blob/main/docs/examples.md).
